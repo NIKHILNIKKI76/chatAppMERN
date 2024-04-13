@@ -4,6 +4,8 @@ import MessageInput from "./MessageInput";
 import Messages from "./Messages";
 import { TiMessages } from "react-icons/ti";
 import { useAuthContext } from "../../context/AuthContext";
+import { IoCloseSharp } from "react-icons/io5";
+
 
 const MessageContainer = () => {
 	const { selectedConversation, setSelectedConversation } = useConversation();
@@ -21,8 +23,13 @@ const MessageContainer = () => {
 				<>
 					{/* Header */}
 					<div className='bg-slate-500 px-4 py-2 mb-2'>
-						<span className='label-text'>To:</span>{" "}
 						<span className='text-gray-900 font-bold'>{selectedConversation.fullName}</span>
+						<button
+							className='absolute top-0 right-0 px-3 py-2 mt-1 text-white'
+							onClick={() => setSelectedConversation(null)}
+						>
+							<IoCloseSharp />
+						</button>
 					</div>
 					<Messages />
 					<MessageInput />
