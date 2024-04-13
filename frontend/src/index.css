@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* 
+felt better without any background image */
+
+/* body {
 	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg9.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-}
+} */
 
 
 /* dark mode looking scrollbar */
